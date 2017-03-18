@@ -20,24 +20,7 @@
 		<level value="info" />
 	</logger>
 
-	<logger name="fr.kdefombelle.formatter">
-		<level value="info" />
-	</logger>
-
-	<!--route id Formatter to set log level -->
-	<logger name="RouteReadXmlFilesSplit">
-		<level value="info" />
-	</logger>
-	
-	<logger name="RouteSplitXmlFiles">
-		<level value="info" />
-	</logger>
-	
-	<logger name="RouteReadFilesFormatter">
-		<level value="info" />
-	</logger>
-	
-	<logger name="RouteFormatter">
+	<logger name="fr.kdefombelle.camel">
 		<level value="info" />
 	</logger>
 	
