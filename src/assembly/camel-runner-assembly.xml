@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2
   	http://maven.apache.org/xsd/assembly-1.1.2.xsd">
 
-	<id>formatter</id>
+	<id>camel-runner</id>
 
 	<formats>
 		<format>zip</format>
@@ -14,19 +14,19 @@
 			<outputDirectory></outputDirectory>
 		</file>
 		<file>
-			<source>${project.build.directory}/formatter/bin/formatter.sh</source>
+			<source>${project.build.directory}/camel-runner/bin/camel-runner.sh</source>
 			<outputDirectory>bin</outputDirectory>
 			<fileMode>0755</fileMode>
 			<lineEnding>unix</lineEnding>
 		</file>
 		<file>
-			<source>${project.build.directory}/formatter/bin/formatter.bat</source>
+			<source>${project.build.directory}/camel-runner/bin/camel-runner.bat</source>
 			<outputDirectory>bin</outputDirectory>
 		</file>
 	</files>
 	<fileSets>
 		<fileSet>
-			<directory>${project.build.directory}/formatter/jar</directory>
+			<directory>${project.build.directory}/camel-runner/jar</directory>
 			<outputDirectory>jar</outputDirectory>
 		</fileSet>
 		<fileSet>

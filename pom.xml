@@ -3,8 +3,8 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>fr.kdefombelle.formatter</groupId>
-	<artifactId>formatter</artifactId>
+	<groupId>fr.kdefombelle.camel</groupId>
+	<artifactId>camel-runner</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<name>formatter</name>
@@ -52,12 +52,12 @@
 					<copyConfigurationDirectory>true</copyConfigurationDirectory>
 					<!-- includeConfigurationDirectoryInClasspath>true</includeConfigurationDirectoryInClasspath -->
 					<!-- licenseHeaderFile>${project.basedir}/src/main/appassembler/license.txt</licenseHeaderFile -->
-					<assembleDirectory>${project.build.directory}/formatter</assembleDirectory>
+					<assembleDirectory>${project.build.directory}/camel-runner</assembleDirectory>
 					<!-- platforms> <platform>windows</platform> <platform>unix</platform> </platforms -->
 					<programs>
 						<program>
-							<mainClass>fr.kdefombelle.formatter.FormatterRunner</mainClass>
-							<name>formatter</name>
+							<mainClass>fr.kdefombelle.integration.runner.CamelRouteRunner</mainClass>
+							<name>camel-runner</name>
 							<jvmSettings>
 								<initialMemorySize>1024m</initialMemorySize>
 							</jvmSettings>
@@ -74,7 +74,6 @@
 					<execution>
 						<phase>package</phase>
 						<goals>
-
 							<goal>single</goal>
 						</goals>
 					</execution>
@@ -82,7 +81,7 @@
 				<configuration>
 					<appendAssemblyId>false</appendAssemblyId>
 					<descriptors>
-						<descriptor>${project.basedir}/src/assembly/formatter-assembly.xml</descriptor>
+						<descriptor>${project.basedir}/src/assembly/camel-runner-assembly.xml</descriptor>
 					</descriptors>
 				</configuration>
 			</plugin>

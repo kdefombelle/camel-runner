@@ -6,22 +6,10 @@
        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="properties"
-		class="org.apache.camel.component.properties.PropertiesComponent">
-		<property name="location" value="formatter.properties" />
-	</bean>
+	<bean id="camelContextHandler" class="fr.kdefombelle.integration.runner.CamelContextHandler" />
 
 	<camel:camelContext id="camelContext" autoStartup="false">
-		<camel:routeBuilder ref="formatterRouteBuilder" />
-		<camel:routeBuilder ref="csvToXmlRouteBuilder" />
+		<camel:contextScan/>
 	</camel:camelContext>
-
-
-	<bean id="camelContextHandler" class="fr.kdefombelle.integration.runner.CamelContextHandler" />
-	<bean id="formatterRouteBuilder" class="fr.kdefombelle.integration.formatter.FormatterRouteBuilder" />
-	<bean id="formatterXmlModelCreator" class="fr.kdefombelle.integration.formatter.FreemarkerXmlModelCreator" />
-	<bean id="csvToXmlRouteBuilder" class="fr.kdefombelle.integration.formatter.CsvToXmlRouteBuilder" />
-
-	<!--constructor-arg index="0" value="${murex.reporting.user}" / -->
 
 </beans>

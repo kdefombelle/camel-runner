@@ -9,5 +9,5 @@
     <context:annotation-config />
 
     <import resource="camel-context.xml"/>
-
+	<import resource="classpath*:*spring-route.xml"/>
 </beans>
