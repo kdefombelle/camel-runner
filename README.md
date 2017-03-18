@@ -56,3 +56,4 @@ Option              Description
 [1]: http://camel.apache.org/ "Apache Camel"
 [2]: http://freemarker.org/ "Apache Freemarker"
 [3]: https://projects.spring.io/spring-framework/ "Spring framework"
+ECHO is on.
